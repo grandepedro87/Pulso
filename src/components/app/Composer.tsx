@@ -25,8 +25,8 @@ export function Composer() {
 
   async function submit() {
     const t = text.trim();
-    if (!t) return toast.error("Escreva algo para publicar.");
-    if (t.length > 1000) return toast.error("Máximo de 1000 caracteres.");
+    if (!t) { toast.error("Escreva algo para publicar."); return; }
+    if (t.length > 1000) { toast.error("Máximo de 1000 caracteres."); return; }
     setBusy(true);
     try {
       const image_url = file ? await uploadImage(user!.id, file) : null;

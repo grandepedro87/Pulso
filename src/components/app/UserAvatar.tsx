@@ -13,8 +13,8 @@ export function UserAvatar({
   path,
   className,
 }: {
-  name?: string | null;
-  path?: string | null;
+  name?: string | null | undefined;
+  path?: string | null | undefined;
   className?: string;
 }) {
   const url = useMediaUrl(path);

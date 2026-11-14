@@ -37,7 +37,7 @@ export const POST_SELECT = `id, user_id, content, image_url, sport, created_at,
   comments(count)`;
 
 export interface FeedFilter {
-  sport?: string;
+  sport?: string | undefined;
   userIds?: string[];
   userId?: string;
   limit?: number;
